@@ -607,17 +607,26 @@ html, body {
   right: 0;
   top: 10px;
   bottom: 0px;
-  border: 1px solid #BFBFBF; }
+  font-size: 0; }
+
+.buttonWrap--errorContainer.contains-error {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 8px;
+  background: #CC3333;
+  opacity: 0.2; }
 
 .tabGroup--button {
   padding: 0 18px;
   height: 100%;
-  float: left;
+  display: inline-block;
   font-size: 24px;
   color: #016FAD;
   background: #FFFFFF;
   position: relative;
-  cursor: pointer; }
+  cursor: pointer;
+  border: 1px solid #BFBFBF; }
   .tabGroup--button:hover {
     background-color: #016FAD;
     color: #FFFFFF; }
@@ -629,7 +638,7 @@ html, body {
     transform: translate(-50%, -50%); }
 
 .tabGroup--button__left {
-  border-right: 1px solid #BFBFBF; }
+  border-right: none; }
 
 .tab {
   width: 232px;
@@ -688,6 +697,9 @@ html, body {
     background: white;
     height: 2px; }
 
+.tab__error {
+  background: #faeaea; }
+
 .tab--textrow {
   display: block;
   width: 100%;
@@ -716,7 +728,13 @@ html, body {
 .errorWrap {
   width: 1222px;
   position: relative;
-  margin: 1718px auto;
+  margin: 1608px auto 0px auto;
+  padding-left: 21px; }
+
+.errorWrap2 {
+  width: 1222px;
+  position: relative;
+  margin: 68px auto 0px auto;
   padding-left: 665px; }
 
 .errorMarker {
@@ -724,36 +742,75 @@ html, body {
   display: table;
   overflow: hidden;
   padding-top: 6px; }
-  .errorMarker .triangle-arrow {
-    position: absolute;
-    height: 0;
-    width: 0;
-    top: -12px;
-    left: 12px;
-    border-style: solid;
-    border-width: 6px;
-    border-color: transparent transparent #cc3333 transparent; }
-  .errorMarker .errorMarker--icon {
-    text-align: center;
-    display: table-cell;
-    background: #CC3333;
-    color: #FFFFFF;
-    font-size: 24px;
-    padding: 6px;
-    position: relative;
-    z-index: 10; }
-  .errorMarker .errorMarker--messageWrap {
-    display: table-cell;
-    vertical-align: middle;
-    position: relative;
-    background: #f5d6d6;
-    /*red2 20%tint*/
-    padding: 0 14px; }
-    .errorMarker .errorMarker--messageWrap.message-is-right {
-      -ms-transform: translate(-100%, 0%);
-      transform: translate(-100%, 0%); }
+
+.errorMarker--icon {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  font-size: 24px;
+  padding: 6px;
+  position: relative;
+  z-index: 10; }
+
+.triangle-arrow__top {
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -12px;
+  left: 12px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent transparent #CC3333 transparent; }
+
+.errorMarker--messageWrap {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  padding: 4px 14px; }
+  .errorMarker--messageWrap.message-is-right {
+    -ms-transform: translate(-100%, 0%);
+    transform: translate(-100%, 0%); }
+
+.errorMarker--icon__red {
+  background: #CC3333;
+  color: #FFFFFF; }
+
+.errorMarker--messageWrap__red {
+  background: #f5d6d6;
+  /*red2 20%tint*/ }
+
+.errorMarker--icon__yellow {
+  background: #F0D202;
+  color: #000000; }
+
+.errorMarker--messageWrap__yellow {
+  background: #fcf6cc;
+  /*$yellow2 20%tint*/ }
 
 .errorMarker--message {
   font-family: Arial, Helvetica, sans-serif;
   color: #262626;
   font-size: 12px; }
+
+.button--scrollToError {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #006193;
+  margin: 4px 0; }
+
+.fixed-bottom {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  padding: 0;
+  margin: 0;
+  z-index: 20; }
+  .fixed-bottom .errorMarker .errorMarker--icon {
+    width: 36px; }
+  .fixed-bottom .errorMarker .errorMarker--messageWrap {
+    min-width: 300px;
+    max-width: 400px; }
+  .fixed-bottom .button--scrollToError {
+    display: block; }

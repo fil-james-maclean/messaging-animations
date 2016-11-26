@@ -29,6 +29,7 @@ gulp.task('serve', function() {
 gulp.task('vendor-js', function(){
   return gulp.src([
     'bower_components/jquery/dist/jquery.min.js',
+    'bower_components/protonet/jquery.inview/jquery.inview.min.js',
     'bower_components/gsap/src/minified/TweenMax.min.js'
   ])
   .pipe( concat( 'vendor.js' ) )

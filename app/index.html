@@ -75,7 +75,7 @@
                 <span class="tab--textrow  tab--textrow__3">Investment Fund Account AB 125655</span>
             </div>
 
-            <div class="tab  tab__inactive">
+            <div class="tab  tab__inactive  tab__error">
                 <span class="tab--textrow  tab--textrow__1">First Last</span>
                 <span class="tab--textrow  tab--textrow__2">Car Investment001</span>
                 <span class="tab--textrow  tab--textrow__3">Investment Fund Account AB 125655</span>
@@ -102,6 +102,7 @@
         </div>  <!-- End tabGroup--scrollArea -->
 
         <div class="tabGroup--buttonWrap">
+            <div class="buttonWrap--errorContainer contains-error"></div>
             <div class="tabGroup--button  tabGroup--button__left">
                 <span class="icon-chevron-l-light"></span>
             </div>
@@ -111,15 +112,32 @@
         </div>
 
     </div> <!-- End tabGroup -->
-<div class="errorWrap">
-    <div class="errorMarker">
-		<div class="errorMarker--icon  icon-warning-circle-filled">
-		    <div class="triangle-arrow"></div>
-		</div>
-        <div class="errorMarker--messageWrap  message-is-right">
-            <span class="errorMarker--message">Can't buy more than 90%</div>
+    <div class="errorWrap">
+
+        <div class="errorMarker  js-hide-error-trigger">
+            <div class="errorMarker--icon  errorMarker--icon__yellow icon-warning-triangle-filled  js-show-error-trigger">
+
+            </div>
+            <div class="errorMarker--messageWrap  errorMarker--messageWrap__yellow  message-is-right  js-hide-error-target">
+                <span class="errorMarker--message">Can't buy more than 90% if you do the whole world will likley explode, killing all.</span>
+            </div>
+        </div>
+
+    </div>
+
+<div class="errorWrap2  js-error-offscreen-trigger">
+    <div class="js-error-offscreen-target">
+        <div class="errorMarker">
+    		<div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled">
+    		    <div class="triangle-arrow__top"></div>
+    		</div>
+            <div class="errorMarker--messageWrap  errorMarker--messageWrap__red">
+                <span class="errorMarker--message">Can't buy more than 90%</span>
+                <a href="" class="button--scrollToError">Show error</a>
+            </div>
         </div>
     </div>
+
 </div>
 
 </div><!-- End bg Wrap -->

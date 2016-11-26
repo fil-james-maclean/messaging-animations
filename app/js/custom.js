@@ -28,6 +28,10 @@ leftBtn.on( 'click', function (e) {
     TweenMax.to(scrollTabs, 0.3, { x: '-=232px' });
     tabPosition++;
     console.log(tabPosition);
+    if (tabPosition >= 5 ){
+      $('.buttonWrap--errorContainer').removeClass('contains-error');
+      console.log('removed error');
+    }
   }
   else {
     var tl = new TimelineLite();
@@ -46,6 +50,11 @@ rightBtn.on( 'click', function (e) {
     TweenMax.to(scrollTabs, 0.3, { x: '+=232px' });
     tabPosition--;
     console.log(tabPosition);
+
+    if (tabPosition <= 4 ){
+      $('.buttonWrap--errorContainer').addClass('contains-error');
+      console.log('added error');
+    }
   }
   else {
     var tl = new TimelineLite();
@@ -58,19 +67,34 @@ rightBtn.on( 'click', function (e) {
 
 } );
 
-$('.errorMarker--icon').on('mouseenter', function(e) {
-  TweenMax.to( $('.errorMarker--messageWrap'), 0.6, {
+$('.js-show-error-trigger').on('mouseenter', function(e) {
+  TweenMax.to( $('.js-hide-error-target'), 0.6, {
     x: '0%',
     ease: Power2.easeOut
   }  );
 });
 
-$('.errorMarker').on('mouseleave', function(e) {
-  TweenMax.to( $('.errorMarker--messageWrap'), 0.6, {
+$('.js-hide-error-trigger').on('mouseleave', function(e) {
+  TweenMax.to( $('.js-hide-error-target'), 0.6, {
     x: '-100%',
     ease: Power2.easeIn
   }  );
 });
+
+// TweenMax.to( $(this), 0.3, {
+//   y:'0%',
+//   opacity: 1
+// });
+$('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
+  if (isInView) {
+    $('.js-error-offscreen-target').removeClass('fixed-bottom');
+
+  } else {
+    $('.js-error-offscreen-target').addClass('fixed-bottom');
+
+  }
+});
+
 
 
 // $( ".tab__active" ).clone().appendTo( ".tabGroup" );
