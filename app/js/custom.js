@@ -94,7 +94,11 @@ $('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
 
   }
 });
-
+ $( document ).on('click', '.js-scrollToError', function( e ) {
+  TweenLite.to(window, 1, {scrollTo:{y:"#section1", offsetY:120}});
+  //  TweenLite.to(window, 2, {scrollTo:{y:".js-error-offscreen-trigger", offsetY:50}} );
+   e.preventDefault();
+ } );
 
 
 // $( ".tab__active" ).clone().appendTo( ".tabGroup" );

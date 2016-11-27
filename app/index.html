@@ -114,8 +114,8 @@
     </div> <!-- End tabGroup -->
     <div class="errorWrap">
 
-        <div class="errorMarker  js-hide-error-trigger">
-            <div class="errorMarker--icon  errorMarker--icon__yellow icon-warning-triangle-filled  js-show-error-trigger">
+        <div class="errorMarker errorMarker--slideOut  js-hide-error-trigger">
+            <div class="errorMarker--icon  errorMarker--icon__yellow  icon-warning-triangle-filled  js-show-error-trigger">
 
             </div>
             <div class="errorMarker--messageWrap  errorMarker--messageWrap__yellow  message-is-right  js-hide-error-target">
@@ -125,15 +125,15 @@
 
     </div>
 
-<div class="errorWrap2  js-error-offscreen-trigger">
+<div id="section1" class="errorWrap2  js-error-offscreen-trigger">
     <div class="js-error-offscreen-target">
-        <div class="errorMarker">
+        <div class="errorMarker errorMarker--floating">
     		<div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled">
     		    <div class="triangle-arrow__top"></div>
     		</div>
             <div class="errorMarker--messageWrap  errorMarker--messageWrap__red">
                 <span class="errorMarker--message">Can't buy more than 90%</span>
-                <a href="" class="button--scrollToError">Show error</a>
+                <a href="" class="button--scrollToError  js-scrollToError">Show error</a>
             </div>
         </div>
     </div>
