@@ -98,7 +98,7 @@ $('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
   } else {
     $('.js-error-offscreen-target').addClass('fixed-bottom');
     TweenMax.from( $('.js-error-offscreen-target'), 0.6, {
-      y: '-100%',
+      y: '-200%',
       opacity: 0,
       ease: Power2.easeOut
     } );
