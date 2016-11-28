@@ -87,10 +87,21 @@ $('.js-hide-error-trigger').on('mouseleave', function(e) {
 // });
 $('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
   if (isInView) {
+
     $('.js-error-offscreen-target').removeClass('fixed-bottom');
+    TweenMax.from( $('.js-error-offscreen-target'), 0.6, {
+      y: '100%',
+      opacity: 0,
+      ease: Power2.easeOut
+    } );
 
   } else {
     $('.js-error-offscreen-target').addClass('fixed-bottom');
+    TweenMax.from( $('.js-error-offscreen-target'), 0.6, {
+      y: '-100%',
+      opacity: 0,
+      ease: Power2.easeOut
+    } );
 
   }
 });

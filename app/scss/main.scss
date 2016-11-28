@@ -37,11 +37,11 @@ html, body {
 
 .tabGroup {
   width: 1222px;
-  height: 102px;
-  padding-top:10px;
+  height: 152px;
+  padding-top:60px;
   overflow: hidden;
   position: relative;
-  margin: 191px auto 0 auto;
+  margin: 139px auto 0 auto;
   // background: salmon;
 }
 
@@ -54,20 +54,25 @@ html, body {
 .tabGroup--buttonWrap {
     position: absolute;
     right: 0;
-    top: 10px;
+    top: 60px;
     bottom: 0px;
     font-size: 0;
 
 }
 .buttonWrap--errorContainer {
+  display: none;
   &.contains-error {
         content: '';
         display: inline-block;
         height: 100%;
         width: 8px;
-        background: $red1;
-        opacity: 0.2;
+        background: #f5d6d6;/*red2 20%tint*/
     }
+}
+.buttonWrap--errorWrap {
+  position: absolute;
+  top: -46px;
+  left: -13px;
 }
 .tabGroup--button {
     padding: 0 18px;
@@ -177,6 +182,12 @@ html, body {
 .tab__error {
     background: #faeaea;
 }
+.tab--errorWrap {
+  position: absolute;
+  top: -47px;
+  left: 12px;
+  right: 12px;
+}
 .tab--textrow {
   display: block;
   width: 100%;
@@ -256,6 +267,16 @@ html, body {
   border-width: 6px;
   border-color: transparent transparent $red1 transparent;
 }
+.triangle-arrow__bottom {
+  position: absolute;
+  height: 0;
+  width: 0;
+  bottom: -12px;
+  left: 12px;
+  border-style: solid;
+  border-width: 6px;
+  border-color:  $red1 transparent transparent transparent;
+}
 .errorMarker--messageWrap {
   display: table-cell;
   vertical-align: middle;
@@ -303,6 +324,7 @@ html, body {
   padding: 0;
   margin: 0;
   z-index: 20;
+
   .errorMarker {
 
     .errorMarker--icon {
