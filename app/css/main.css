@@ -604,7 +604,7 @@ html, body {
 
 .tabGroup--scrollArea {
   position: absolute;
-  width: 3000px;
+  width: 4000px;
   left: 0px; }
 
 .tabGroup--buttonWrap {
@@ -614,20 +614,26 @@ html, body {
   bottom: 0px;
   font-size: 0; }
 
-.buttonWrap--errorContainer {
-  display: none; }
-  .buttonWrap--errorContainer.contains-error {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    width: 8px;
-    background: #f5d6d6;
-    /*red2 20%tint*/ }
-
 .buttonWrap--errorWrap {
   position: absolute;
   top: -46px;
   left: -13px; }
+
+.tabGroup--errorContainer {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  height: 92px;
+  width: 8px;
+  background: #f5d6d6;
+  /*red2 20%tint*/
+  z-index: 20; }
+
+.tabGroup--errorContainer__left {
+  left: 0; }
+
+.tabGroup--errorContainer__right {
+  right: 75px; }
 
 .tabGroup--button {
   padding: 0 18px;
