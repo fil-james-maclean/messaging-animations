@@ -337,12 +337,16 @@ html, body {
   font-size: 12px;
 }
 .button--scrollToError {
-    display: none;
+    // float: right;
+    // position: absolute;
+    // right: 4px;
+    display: block;
+    // text-align: right;
     font-family: $web-safe-font;
     font-weight: bold;
     font-size: 12px;
     color: $blue1;
-    margin: 4px 0;
+    padding: 4px 0;
 }
 .fixed-bottom {
   position: fixed;
@@ -378,7 +382,13 @@ html, body {
   z-index: 20;
 }
 .toaster--toast {
-  margin-top: 24px;
+  margin-top: 12px;
+display: none;
+  visibility: hidden;
+
+  &.show {
+    display: block;
+  }
   .errorMarker--messageWrap {
     width: 300px;
   }

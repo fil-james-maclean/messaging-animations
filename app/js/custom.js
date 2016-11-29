@@ -158,26 +158,27 @@ $('.js-hide-error-trigger').on('mouseleave', function(e) {
 
 $('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
   if (isInView) {
+console.log('inview');
 
-    $('.js-error-offscreen-target').removeClass('fixed-bottom');
-    TweenMax.from( $('.js-error-offscreen-target'), 0.6, {
-      y: '100%',
-      opacity: 0,
-      ease: Power2.easeOut
-    } );
+    TweenMax.to( $('.js-error-offscreen-target'), 0.4, {
+      y: '-200%',
+      autoAlpha: 0,
+      ease: Power2.easeIn
+    }, function() {  $('.js-error-offscreen-target').removeClass('show');} );
 
   } else {
-    $('.js-error-offscreen-target').addClass('fixed-bottom');
-    TweenMax.from( $('.js-error-offscreen-target'), 0.6, {
-      y: '-200%',
-      opacity: 0,
+    console.log('OUTview');
+    $('.js-error-offscreen-target').addClass('show');
+    TweenMax.to( $('.js-error-offscreen-target'), 0.6, {
+      y: '0%',
+      autoAlpha: 1,
       ease: Power2.easeOut
     } );
 
   }
 });
 
-
+// ease: Power2.easeOut
 
  $( document ).on('click', '.js-scrollToError', function( e ) {
   TweenLite.to(window, 1, {scrollTo:{y:"#section1", offsetY:120}});
