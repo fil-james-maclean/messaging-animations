@@ -855,3 +855,14 @@ html, body {
     max-width: 400px; }
   .fixed-bottom .button--scrollToError {
     display: block; }
+
+.toaster {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 20; }
+
+.toaster--toast {
+  margin-top: 24px; }
+  .toaster--toast .errorMarker--messageWrap {
+    width: 300px; }

@@ -370,3 +370,17 @@ html, body {
   }
 
 }
+
+.toaster {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 20;
+}
+.toaster--toast {
+  margin-top: 24px;
+  .errorMarker--messageWrap {
+    width: 300px;
+  }
+
+}
