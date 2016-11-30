@@ -321,7 +321,7 @@ html, body {
   color: $white;
 }
 .errorMarker--messageWrap__red {
-  background: #f5d6d6;/*red2 20%tint*/
+  background: #f5d6d6; /*red2 20%tint*/
 }
 .errorMarker--icon__yellow {
   background: $yellow1;
@@ -329,6 +329,13 @@ html, body {
 }
 .errorMarker--messageWrap__yellow {
   background: #fcf6cc; /*$yellow2 20%tint*/
+}
+.errorMarker--icon__green {
+  background: $green1;
+  color: $white;
+}
+.errorMarker--messageWrap__green {
+  background: #d6ebcc; /*$green1 20%tint*/
 }
 
 .errorMarker--message {

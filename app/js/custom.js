@@ -35,7 +35,7 @@ leftBtn.on( 'click', function (e) {
     // }
   }
   else {
-    var tl = new TimelineLite();
+    var tl = new TimelineMax();
         tl.to(scrollTabs, 0.2, {left:-80});
         tl.to(scrollTabs, 0.6, {
           left:0,
@@ -59,7 +59,7 @@ rightBtn.on( 'click', function (e) {
     // }
   }
   else {
-    var tl = new TimelineLite();
+    var tl = new TimelineMax();
         tl.to(scrollTabs, 0.2, {left:80});
         tl.to(scrollTabs, 0.6, {
           left:0,
@@ -155,7 +155,30 @@ $('.js-hide-error-trigger').on('mouseleave', function(e) {
 //   opacity: 1
 // });
 
-
+$( document ).on('click', '.js-addinvestment-trigger', function( e ) {
+  function hideShow() {
+    $('.js-addinvestment-target').toggleClass('show');
+  };
+hideShow();
+    var tl = new TimelineMax();
+  //
+      tl.from( $('.js-addinvestment-target'), 0.6, {
+          y: '-100%',
+          autoAlpha: 0,
+          opacity: 0,
+          ease: Power2.easeOut
+        } )
+        .to( $('.js-addinvestment-target'), 0.6, {
+          autoAlpha: 0,
+          opacity: 0,
+          ease: Power2.easeOut,
+          clearProps:"all",
+          onComplete: hideShow
+        }, "+=3" )
+        // .add($('.js-addinvestment-target').removeClass('show') );
+console.log("addInvestment");
+      e.preventDefault();
+});
 $('.js-error-offscreen-trigger').on('inview', function(event, isInView) {
   if (isInView) {
 console.log('inview');
@@ -181,8 +204,8 @@ console.log('inview');
 // ease: Power2.easeOut
 
  $( document ).on('click', '.js-scrollToError', function( e ) {
-  TweenLite.to(window, 1, {scrollTo:{y:"#section1", offsetY:120}});
-  //  TweenLite.to(window, 2, {scrollTo:{y:".js-error-offscreen-trigger", offsetY:50}} );
+  TweenMax.to(window, 1, {scrollTo:{y:"#section1", offsetY:120}});
+  //  TweenMax.to(window, 2, {scrollTo:{y:".js-error-offscreen-trigger", offsetY:50}} );
    e.preventDefault();
  } );
 

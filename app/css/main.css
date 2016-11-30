@@ -826,6 +826,14 @@ html, body {
   background: #fcf6cc;
   /*$yellow2 20%tint*/ }
 
+.errorMarker--icon__green {
+  background: #339900;
+  color: #FFFFFF; }
+
+.errorMarker--messageWrap__green {
+  background: #d6ebcc;
+  /*$green1 20%tint*/ }
+
 .errorMarker--message {
   font-family: Arial, Helvetica, sans-serif;
   color: #262626;
