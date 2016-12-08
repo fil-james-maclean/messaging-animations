@@ -614,12 +614,12 @@ html, body {
   bottom: 0px;
   font-size: 0; }
 
-.buttonWrap--errorWrap {
+.buttonWrap--msgWrap {
   position: absolute;
   top: -46px;
   left: -13px; }
 
-.tabGroup--errorContainer {
+.tabGroup--msgContainer {
   opacity: 0;
   position: absolute;
   bottom: 0;
@@ -629,10 +629,10 @@ html, body {
   /*red2 20%tint*/
   z-index: 20; }
 
-.tabGroup--errorContainer__left {
+.tabGroup--msgContainer__left {
   left: 0; }
 
-.tabGroup--errorContainer__right {
+.tabGroup--msgContainer__right {
   right: 75px; }
 
 .tabGroup--button {
@@ -715,10 +715,10 @@ html, body {
     background: white;
     height: 2px; }
 
-.tab__error {
+.tab__msg {
   background: #faeaea; }
 
-.tab--errorWrap {
+.tab--msgWrap {
   position: absolute;
   top: -47px;
   left: 12px;
@@ -749,30 +749,30 @@ html, body {
   line-height: 20px;
   color: #666666; }
 
-.errorWrap {
+.msgWrap {
   width: 1222px;
   position: relative;
   margin: 1616px auto 0px auto;
   padding-left: 21px; }
 
-.errorWrap2 {
+.msgWrap2 {
   width: 1222px;
   position: relative;
   margin: 74px auto 0px auto;
   padding-left: 665px; }
 
-.errorMarker {
+.msg {
   position: relative;
   display: table;
   cursor: help; }
 
-.errorMarker--floating {
+.msg--floating {
   box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.2); }
 
-.errorMarker--slideOut {
+.msg--slideOut {
   overflow: hidden; }
 
-.errorMarker--icon {
+.msg--icon {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
@@ -801,46 +801,46 @@ html, body {
   border-width: 6px;
   border-color: #CC3333 transparent transparent transparent; }
 
-.errorMarker--messageWrap {
+.msg--txtWrap {
   display: table-cell;
   vertical-align: middle;
   position: relative;
   padding: 4px 14px; }
-  .errorMarker--messageWrap.message-is-right {
+  .msg--txtWrap.message-is-right {
     -ms-transform: translate(-100%, 0%);
     transform: translate(-100%, 0%); }
 
-.errorMarker--icon__red {
+.msg--icon__red {
   background: #CC3333;
   color: #FFFFFF; }
 
-.errorMarker--messageWrap__red {
+.msg--txtWrap__red {
   background: #f5d6d6;
   /*red2 20%tint*/ }
 
-.errorMarker--icon__yellow {
+.msg--icon__yellow {
   background: #F0D202;
   color: #000000; }
 
-.errorMarker--messageWrap__yellow {
+.msg--txtWrap__yellow {
   background: #fcf6cc;
   /*$yellow2 20%tint*/ }
 
-.errorMarker--icon__green {
+.msg--icon__green {
   background: #339900;
   color: #FFFFFF; }
 
-.errorMarker--messageWrap__green {
+.msg--txtWrap__green {
   background: #d6ebcc;
   /*$green1 20%tint*/ }
 
-.errorMarker--message {
+.msg--txt {
   font-family: Arial, Helvetica, sans-serif;
   color: #262626;
-  font-size: 12px; }
+  font-size: 12px;
+  display: block; }
 
-.button--scrollToError {
-  display: block;
+.button--scrollTomsg {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 12px;
@@ -854,15 +854,13 @@ html, body {
   padding: 0;
   margin: 0;
   z-index: 20; }
-  .fixed-bottom .errorMarker .errorMarker--icon {
+  .fixed-bottom .msg .msg--icon {
     width: 36px; }
-    .fixed-bottom .errorMarker .errorMarker--icon .triangle-arrow__top {
+    .fixed-bottom .msg .msg--icon .triangle-arrow__top {
       display: none; }
-  .fixed-bottom .errorMarker .errorMarker--messageWrap {
+  .fixed-bottom .msg .msg--txtWrap {
     min-width: 300px;
     max-width: 400px; }
-  .fixed-bottom .button--scrollToError {
-    display: block; }
 
 .toaster {
   position: fixed;
@@ -876,5 +874,24 @@ html, body {
   visibility: hidden; }
   .toaster--toast.show {
     display: block; }
-  .toaster--toast .errorMarker--messageWrap {
-    width: 300px; }
+  .toaster--toast .msgToast .msg--icon {
+    font-size: 30px;
+    padding: 18px; }
+  .toaster--toast .msgToast .msg--txtWrap {
+    width: 300px;
+    padding: 8px 20px;
+    background: rgba(38, 38, 38, 0.95); }
+  .toaster--toast .msgToast .msg--txt {
+    color: #FFFFFF;
+    line-height: 18px; }
+  .toaster--toast .msgToast .button--scrollTomsg {
+    color: #FFFFFF;
+    text-decoration: underline; }
+
+.js-addinvestment-trigger {
+  position: absolute;
+  top: 677px;
+  height: 32px;
+  width: 100%;
+  background: transparent;
+  z-index: 10; }

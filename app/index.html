@@ -19,8 +19,9 @@
 
 <html>
 <body>
-<a href="" class="js-addinvestment-trigger">ADD INVESTMENT</a>
+
 <div class="bg-img-wrap">
+    <a href="" class="js-addinvestment-trigger"></a>
     <div class="bg-img bg-full-form"></div>
 
 
@@ -84,19 +85,19 @@
                 </div>
 
 
-                <div class="tab  tab__inactive  tab__error">
+                <div class="tab  tab__inactive  tab__msg">
                     <span class="tab--textrow  tab--textrow__1">First Last</span>
                     <span class="tab--textrow  tab--textrow__2">Car Investment001</span>
                     <span class="tab--textrow  tab--textrow__3">Investment Fund Account AB 125655</span>
 
-    				<div class="tab--errorWrap">
+    				<div class="tab--msgWrap">
 
-    					<div class="errorMarker errorMarker--floating">
-    						<div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled">
+    					<div class="msg msg--floating">
+    						<div class="msg--icon  msg--icon__red  icon-warning-circle-filled">
     						    <div class="triangle-arrow__bottom"></div>
     						</div>
-    							<div class="errorMarker--messageWrap  errorMarker--messageWrap__red">
-    									<span class="errorMarker--message">Can't buy more than 90%</span>
+    							<div class="msg--txtWrap  msg--txtWrap__red">
+    									<span class="msg--txt">Can't buy more than 90%</span>
     							</div>
     					</div>
 
@@ -141,11 +142,11 @@
 
         </div>  <!-- END tabGroup--scrollWrap  -->
 
-        <div class="tabGroup--errorContainer  tabGroup--errorContainer__left  contains-error">
-            <div class="buttonWrap--errorWrap">
+        <div class="tabGroup--msgContainer  tabGroup--msgContainer__left  contains-msg">
+            <div class="buttonWrap--msgWrap">
 
-                <div class="errorMarker errorMarker--floating">
-                    <div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled  js-tabError-left-trigger">
+                <div class="msg msg--floating">
+                    <div class="msg--icon  msg--icon__red  icon-warning-circle-filled  js-tabmsg-left-trigger">
                         <div class="triangle-arrow__bottom"></div>
                     </div>
                 </div>
@@ -153,11 +154,11 @@
             </div>
         </div>
 
-        <div class="tabGroup--errorContainer  tabGroup--errorContainer__right  contains-error" style="opacity: 1;">
-            <div class="buttonWrap--errorWrap">
+        <div class="tabGroup--msgContainer  tabGroup--msgContainer__right  contains-msg" style="opacity: 1;">
+            <div class="buttonWrap--msgWrap">
 
-                <div class="errorMarker errorMarker--floating">
-                    <div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled  js-tabError-right-trigger">
+                <div class="msg msg--floating">
+                    <div class="msg--icon  msg--icon__red  icon-warning-circle-filled  js-tabmsg-right-trigger">
                         <div class="triangle-arrow__bottom"></div>
                     </div>
                 </div>
@@ -166,11 +167,11 @@
         </div>
 
         <div class="tabGroup--buttonWrap">
-            <!-- <div class="buttonWrap--errorContainer contains-error">
-                <div class="buttonWrap--errorWrap">
+            <!-- <div class="buttonWrap--msgContainer contains-msg">
+                <div class="buttonWrap--msgWrap">
 
-                    <div class="errorMarker errorMarker--floating">
-                        <div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled">
+                    <div class="msg msg--floating">
+                        <div class="msg--icon  msg--icon__red  icon-warning-circle-filled">
                             <div class="triangle-arrow__bottom"></div>
                         </div>
                     </div>
@@ -188,27 +189,27 @@
 
     </div> <!-- End tabGroup -->
 
-    <div class="errorWrap">
+    <div class="msgWrap">
 
-        <div class="errorMarker errorMarker--slideOut  js-hide-error-trigger">
-            <div class="errorMarker--icon  errorMarker--icon__yellow  icon-warning-triangle-filled  js-show-error-trigger">
+        <div class="msg msg--slideOut  js-hide-msg-trigger">
+            <div class="msg--icon  msg--icon__yellow  icon-warning-triangle-filled  js-show-msg-trigger">
 
             </div>
-            <div class="errorMarker--messageWrap  errorMarker--messageWrap__yellow  message-is-right  js-hide-error-target">
-                <span class="errorMarker--message">Can't buy more than 90% if you do the whole world will likley explode, killing all.</span>
+            <div class="msg--txtWrap  msg--txtWrap__yellow  message-is-right  js-hide-msg-target">
+                <span class="msg--txt">Can't buy more than 90% if you do the whole world will likley explode, killing all.</span>
             </div>
         </div>
 
     </div>
 
-<div id="section1" class="errorWrap2  js-error-offscreen-trigger">
-    <!-- <div class="js-error-offscreen-target"> -->
-        <div class="errorMarker errorMarker--floating">
-	    		<div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled">
+<div id="section1" class="msgWrap2  js-msg-offscreen-trigger">
+    <!-- <div class="js-msg-offscreen-target"> -->
+        <div class="msg msg--floating">
+	    		<div class="msg--icon  msg--icon__red  icon-warning-circle-filled">
 	    		    <div class="triangle-arrow__top"></div>
 	    		</div>
-	            <div class="errorMarker--messageWrap  errorMarker--messageWrap__red">
-	                <span class="errorMarker--message">Can't buy more than 90%</span>
+	            <div class="msg--txtWrap  msg--txtWrap__red">
+	                <span class="msg--txt">Can't buy more than 90%</span>
 
 	            </div>
         </div>
@@ -221,21 +222,23 @@
 <div class="toaster">
 
     <div class="toaster--toast  js-addinvestment-target">
-        <div class="errorMarker errorMarker--floating">
-                <div class="errorMarker--icon  errorMarker--icon__green  icon-circle-tick"></div>
-                <div class="errorMarker--messageWrap  errorMarker--messageWrap__green">
-                    <span class="errorMarker--message">Can't buy more than 90%</span>
-                    <a href="" class="button--scrollToError  js-scrollToError">Show error</a>
+        <div class="msgToast msg--floating">
+                <div class="msg--icon  msg--icon__green  icon-circle-tick"></div>
+                <div class="msg--txtWrap  msg--txtWrap__green">
+                    <span class="msg--txt">
+                        <strong>Added investment to <a href="" class="button--scrollTomsg  js-scrollToTable">Table</a></strong>
+                    </span>
+                    <span class="msg--txt">ISDL Europe hydro.</span>
                 </div>
         </div>
     </div>
 
-    <div class="toaster--toast  js-error-offscreen-target">
-        <div class="errorMarker errorMarker--floating">
-                <div class="errorMarker--icon  errorMarker--icon__red  icon-warning-circle-filled"></div>
-                <div class="errorMarker--messageWrap  errorMarker--messageWrap__red">
-                    <span class="errorMarker--message">Can't buy more than 90%</span>
-                    <a href="" class="button--scrollToError  js-scrollToError">Show error</a>
+    <div class="toaster--toast  js-msg-offscreen-target">
+        <div class="msgToast msg--floating">
+                <div class="msg--icon  msg--icon__red  icon-warning-circle-filled"></div>
+                <div class="msg--txtWrap  msg--txtWrap__red">
+                    <span class="msg--txt">Can't buy more than 90%</span>
+                    <a href="" class="button--scrollTomsg  js-scrollTomsg">Show msg</a>
                 </div>
         </div>
     </div>
