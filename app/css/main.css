@@ -836,16 +836,20 @@ html, body {
 
 .msg--txt {
   font-family: Arial, Helvetica, sans-serif;
-  color: #262626;
-  font-size: 12px;
   display: block; }
 
-.button--scrollTomsg {
+.button--secondary {
+  text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
+  color: #016FAD;
+  background: #FFFFFF;
+  border: 1px solid #016FAD; }
+
+.button__small {
   font-size: 12px;
-  color: #006193;
-  padding: 4px 0; }
+  padding: 4px 8px;
+  margin-right: 4px; }
 
 .fixed-bottom {
   position: fixed;
@@ -874,19 +878,37 @@ html, body {
   visibility: hidden; }
   .toaster--toast.show {
     display: block; }
-  .toaster--toast .msgToast .msg--icon {
-    font-size: 30px;
-    padding: 18px; }
-  .toaster--toast .msgToast .msg--txtWrap {
-    width: 300px;
-    padding: 8px 20px;
-    background: rgba(38, 38, 38, 0.95); }
-  .toaster--toast .msgToast .msg--txt {
-    color: #FFFFFF;
-    line-height: 18px; }
-  .toaster--toast .msgToast .button--scrollTomsg {
-    color: #FFFFFF;
-    text-decoration: underline; }
+
+.msgToast .msg--icon {
+  font-size: 30px;
+  padding: 18px; }
+
+.msgToast .msg--txtWrap {
+  width: 260px;
+  padding: 12px 20px;
+  background: rgba(38, 38, 38, 0.95); }
+
+.msgToast .msg--txt {
+  color: #FFFFFF;
+  line-height: 18px; }
+
+.msgToast .msg--txt__title {
+  font-size: 15px; }
+
+.msgToast .msg--txt__sub {
+  font-size: 12px;
+  color: #BFBFBF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; }
+
+.msgToast .msg--txt__body {
+  font-size: 12px; }
+
+.msgToast .msg--txt__btns {
+  margin-top: 12px;
+  margin-bottom: 8px; }
 
 .js-addinvestment-trigger {
   position: absolute;

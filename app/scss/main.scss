@@ -340,21 +340,23 @@ html, body {
 
 .msg--txt {
   font-family: $web-safe-font;
-  color: $grey85;
-  font-size: 12px;
+  // color: $grey85;
+  // font-size: 12px;
   display: block;
 }
-.button--scrollTomsg {
-    // float: right;
-    // position: absolute;
-    // right: 4px;
-    // display: block;
-    // text-align: right;
+.button--secondary {
+    text-decoration: none;
     font-family: $web-safe-font;
     font-weight: bold;
+    color: $blue2;
+    background: $white;
+    border: 1px solid $blue2;
+
+}
+.button__small {
     font-size: 12px;
-    color: $blue1;
-    padding: 4px 0;
+    padding: 4px 8px;
+    margin-right: 4px;
 }
 .fixed-bottom {
   position: fixed;
@@ -395,27 +397,45 @@ html, body {
   &.show {
     display: block;
   }
-  .msgToast {
-    .msg--icon {
-      font-size: 30px;
-      padding: 18px;
-    }
-    .msg--txtWrap {
-      width: 300px;
-      padding: 8px 20px;
-      background: rgba($grey85, 0.95);
-    }
-    .msg--txt {
-      color: $white;
-      line-height: 18px;
-    }
-    .button--scrollTomsg {
-        color: $white;
-        text-decoration: underline;
-    }
+
+}
+
+.msgToast {
+  .msg--icon {
+    font-size: 30px;
+    padding: 18px;
   }
-
-
+  .msg--txtWrap {
+    width: 260px;
+    padding: 12px 20px;
+    background: rgba($grey85, 0.95);
+  }
+  .msg--txt {
+    color: $white;
+    line-height: 18px;
+  }
+  // .button--scrollTomsg {
+  //     color: $white;
+  //     text-decoration: underline;
+  // }
+    .msg--txt__title {
+        font-size: 15px;
+    }
+    .msg--txt__sub {
+        font-size: 12px;
+        color: $grey25;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+  .msg--txt__body {
+      font-size: 12px;
+  }
+  .msg--txt__btns {
+      margin-top: 12px;
+      margin-bottom: 8px;
+  }
 }
 .js-addinvestment-trigger {
   position: absolute;
