@@ -157,7 +157,7 @@ $('.js-hide-msg-trigger').on('mouseleave', function(e) {
 
 $( document ).on('click', '.js-addinvestment-trigger', function( e ) {
   function hideShow() {
-    $('.js-addinvestment-target').toggleClass('show');
+    $('.js-addinvestment-target').toggleClass('hide');
   };
 hideShow();
     var tl = new TimelineMax();
@@ -187,11 +187,11 @@ console.log('inview');
       y: '-200%',
       autoAlpha: 0,
       ease: Power2.easeIn
-    }, function() {  $('.js-msg-offscreen-target').removeClass('show');} );
+    }, function() {  $('.js-msg-offscreen-target').addClass('hide');} );
 
   } else {
     console.log('OUTview');
-    $('.js-msg-offscreen-target').addClass('show');
+    $('.js-msg-offscreen-target').removeClass('hide');
     TweenMax.to( $('.js-msg-offscreen-target'), 0.6, {
       y: '0%',
       autoAlpha: 1,

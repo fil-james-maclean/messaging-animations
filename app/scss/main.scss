@@ -271,9 +271,10 @@ html, body {
 .msg--slideOut {
     overflow: hidden;
 }
-// &.hide {
-//   opacity: 0;
-// }
+.hide {
+    display: none;
+    visibility: hidden;
+}
 
 .msg--icon {
     text-align: center;
@@ -341,7 +342,7 @@ html, body {
 .msg--txt {
     font-family: $web-safe-font;
     // color: $grey85;
-    // font-size: 12px;
+    font-size: 12px;
     display: block;
 }
 .button--secondary {

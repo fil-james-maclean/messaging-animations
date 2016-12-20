@@ -772,6 +772,10 @@ html, body {
 .msg--slideOut {
   overflow: hidden; }
 
+.hide {
+  display: none;
+  visibility: hidden; }
+
 .msg--icon {
   text-align: center;
   display: table-cell;
@@ -836,6 +840,7 @@ html, body {
 
 .msg--txt {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   display: block; }
 
 .button--secondary {

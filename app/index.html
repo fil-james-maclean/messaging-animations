@@ -219,47 +219,86 @@
 
 </div><!-- End bg Wrap -->
 
+
 <div class="toaster">
 
-    <div class="toaster--toast  js-addinvestment-target">
-        <div class="msgToast msg--floating">
-                <div class="msg--icon  msg--icon__green  icon-circle-tick"></div>
-                <div class="msg--txtWrap  msg--txtWrap__green">
-                    <span class="msg--txt">
-                        <strong>Added investment to <a href="" class="button--scrollTomsg  js-scrollToTable">Table</a></strong>
-                    </span>
-                    <span class="msg--txt">ISDL Europe hydro.</span>
-                </div>
+
+    <div class="msgToast hide js-addinvestment-target">
+
+
+        <div class="msg--icon  msg--icon__green icon-circle-tick"></div>
+
+        <div class="msg--txtWrap">
+
+
+        	<span class="msg--txt  msg--txt__title">
+        		<strong>Added investment to Table</strong>
+        	</span>
+
+        	<span class="msg--txt  msg--txt__body">ISDL Europe hydro.</span>
+
+        	<div class="msg--txt__btns">
+        		<a href="" class="button--secondary  button__small  js-scrollToTable">Show table</a>
+        	</div>
+
+
         </div>
+
+    </div>
+
+    <div class="msgToast hide">
+
+
+        <div class="msg--icon  msg--icon__red  icon-warning-circle-filled"></div>
+
+        <div class="msg--txtWrap">
+
+
+        	<span class="msg--txt  msg--txt__title">
+        		<strong>Error <span class="js-err-current">2</span> of <span class="js-err-total">6</span></strong>
+        	</span>
+
+        	<span class="msg--txt  msg--txt__sub">
+        		<strong>Found in Andrew Hayes (Car Investment Limited)</strong>
+        	</span>
+
+        	<span class="msg--txt  msg--txt__body">Can't buy more than 100%</span>
+
+        	<div class="msg--txt__btns">
+        		<a href="" class="button--secondary  button__small  js-scrollToPrevious">Previous</a>
+        		<a href="" class="button--secondary  button__small  js-scrollToNext">Next</a>
+        	</div>
+
+
+        </div>
+
     </div>
 
 
-	<span class="msg--txt  msg--txt__title">
-		<strong>Error 2 of 6</strong>
-	</span>
-	<span class="msg--txt  msg--txt__sub">
-		<strong>Found in Andrew Hayes (Car Investme...)</strong>
-	</span>
-	<span class=" msg--txt  msg--text__body">Can't buy more than 100%</span>
-
-	<div class="msg--txt  msg--text__btns">
-		<a href="" class="button--scrollTomsg  js-scrollToPrevious">Previous</a>
-		<a href="" class="button--scrollTomsg  js-scrollToNext">Next</a>
-	</div>
+    <div class="msgToast  hide  js-msg-offscreen-target">
 
 
-    <div class="toaster--toast  js-msg-offscreen-target">
-        <div class="msgToast msg--floating">
-                <div class="msg--icon  msg--icon__red  icon-warning-circle-filled"></div>
-                <div class="msg--txtWrap  msg--txtWrap__red">
-                    <span class="msg--txt">Can't buy more than 90%</span>
-                    <a href="" class="button--scrollTomsg  js-scrollTomsg">Show msg</a>
-                </div>
+        <div class="msg--icon  msg--icon__red  icon-warning-circle-filled"></div>
+
+        <div class="msg--txtWrap">
+
+
+        	<span class="msg--txt  msg--txt__title">
+        		<strong>Invalid allocation amount</strong>
+        	</span>
+        	<span class="msg--txt  msg--txt__body">Can't buy more than 100%</span>
+
+        	<div class="msg--txt__btns">
+                <a href="" class="button--secondary  button__small  js-scrollTomsg">Show error</a>
+        	</div>
+
+
         </div>
+
     </div>
+
 
 </div><!-- End toaster -->
-
 
 
 <!-- Javascript -->
