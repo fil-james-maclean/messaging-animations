@@ -189,7 +189,7 @@
 
     </div> <!-- End tabGroup -->
 
-    <div class="msgWrap">
+    <!-- <div class="msgWrap">
 
         <div class="msg msg--slideOut  js-hide-msg-trigger">
             <div class="msg--icon  msg--icon__yellow  icon-warning-triangle-filled  js-show-msg-trigger">
@@ -200,13 +200,31 @@
             </div>
         </div>
 
-    </div>
+    </div> -->
+
+	<div class="msgWrap  js-hide-msg-trigger">
+
+		<div class="js-tootlip-msg-trigger">
+			<div class="msg--icon  msg--icon__yellow  icon-warning-triangle-filled  js-show-msg-trigger"></div>
+		</div>
+
+
+		<div class="msg--txtWrap msg--floating  msgTooltip  msg--txtWrap__yellow  js-hide-msg-target  hide">
+			<ul>
+				<li class="msg--txt msg--txt__list">As this is a brokerage asset, some charges may be applied</li>
+				<li class="msg--txt msg--txt__list">Lot size of 1000 applies to this asset</li>
+			</ul>
+			<div class="triangle-arrow  triangle-arrow__left  triangle-arrow__yellow"></div>
+		</div>
+
+
+	</div>
 
 <div id="section1" class="msgWrap2  js-msg-offscreen-trigger">
     <!-- <div class="js-msg-offscreen-target"> -->
         <div class="msg msg--floating">
 	    		<div class="msg--icon  msg--icon__red  icon-warning-circle-filled">
-	    		    <div class="triangle-arrow__top"></div>
+	    		    <div class="triangle-arrow  triangle-arrow__top  triangle-arrow__red"></div>
 	    		</div>
 	            <div class="msg--txtWrap  msg--txtWrap__red">
 	                <span class="msg--txt">Can't buy more than 90%</span>

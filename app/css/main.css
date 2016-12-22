@@ -572,6 +572,12 @@ html, body {
   margin: 0;
   padding: 0; }
 
+ul, ol {
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+  list-style-type: square; }
+
 .bg-img-wrap {
   max-width: 1913px;
   height: 3436px;
@@ -773,8 +779,7 @@ html, body {
   overflow: hidden; }
 
 .hide {
-  display: none;
-  visibility: hidden; }
+  display: none; }
 
 .msg--icon {
   text-align: center;
@@ -785,31 +790,53 @@ html, body {
   position: relative;
   z-index: 10; }
 
-.triangle-arrow__top {
+.triangle-arrow {
   position: absolute;
   height: 0;
   width: 0;
+  border-style: solid;
+  border-width: 6px; }
+
+.triangle-arrow__red {
+  border-color: #CC3333; }
+
+.triangle-arrow__yellow {
+  border-color: #fcf6cc;
+  /*$yellow2 20%tint*/ }
+
+.triangle-arrow__top {
   top: -12px;
   left: 12px;
-  border-style: solid;
-  border-width: 6px;
-  border-color: transparent transparent #CC3333 transparent; }
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent; }
 
 .triangle-arrow__bottom {
-  position: absolute;
-  height: 0;
-  width: 0;
   bottom: -12px;
   left: 12px;
-  border-style: solid;
-  border-width: 6px;
-  border-color: #CC3333 transparent transparent transparent; }
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.triangle-arrow__left {
+  top: 12px;
+  left: -12px;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent; }
+
+.triangle-arrow__right {
+  top: 12px;
+  right: -12px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent; }
 
 .msg--txtWrap {
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  padding: 4px 14px; }
+  padding: 8px 14px; }
   .msg--txtWrap.message-is-right {
     -ms-transform: translate(-100%, 0%);
     transform: translate(-100%, 0%); }
@@ -840,8 +867,7 @@ html, body {
 
 .msg--txt {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  display: block; }
+  font-size: 12px; }
 
 .button--secondary {
   text-decoration: none;
@@ -898,19 +924,42 @@ html, body {
     color: #FFFFFF;
     line-height: 18px; }
   .msgToast .msg--txt__title {
-    font-size: 15px; }
+    font-size: 15px;
+    display: block; }
   .msgToast .msg--txt__sub {
     font-size: 12px;
     color: #BFBFBF;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%; }
+    width: 100%;
+    display: block; }
   .msgToast .msg--txt__body {
-    font-size: 12px; }
+    font-size: 12px;
+    display: block; }
   .msgToast .msg--txt__btns {
     margin-top: 12px;
-    margin-bottom: 8px; }
+    margin-bottom: 8px;
+    display: block; }
+
+.msgTooltip {
+  position: absolute;
+  top: 0;
+  left: 58px;
+  z-index: 10;
+  max-width: 16em;
+  -ms-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.6s ease; }
+  .msgTooltip.hide {
+    -ms-transform: translate(-20%, 0%);
+    transform: translate(-20%, 0%);
+    opacity: 0; }
+
+.msg--txt__list {
+  min-width: 18em;
+  margin-bottom: 0.5em; }
 
 .js-addinvestment-trigger {
   position: absolute;
