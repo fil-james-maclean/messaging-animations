@@ -755,12 +755,6 @@ html, body {
   margin: 0;
   padding: 0; }
 
-ul, ol {
-  margin: 0;
-  margin-left: 1em;
-  padding: 0;
-  list-style-type: square; }
-
 .bg-img-wrap {
   max-width: 1913px;
   height: 3436px;
@@ -962,7 +956,8 @@ ul, ol {
   overflow: hidden; }
 
 .hide {
-  display: none; }
+  display: none;
+  visibility: hidden; }
 
 .msg--icon {
   text-align: center;
@@ -973,53 +968,31 @@ ul, ol {
   position: relative;
   z-index: 10; }
 
-.triangle-arrow {
+.triangle-arrow__top {
   position: absolute;
   height: 0;
   width: 0;
-  border-style: solid;
-  border-width: 6px; }
-
-.triangle-arrow__red {
-  border-color: #CC3333; }
-
-.triangle-arrow__yellow {
-  border-color: #fcf6cc;
-  /*$yellow2 20%tint*/ }
-
-.triangle-arrow__top {
   top: -12px;
   left: 12px;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-left-color: transparent; }
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent transparent #CC3333 transparent; }
 
 .triangle-arrow__bottom {
+  position: absolute;
+  height: 0;
+  width: 0;
   bottom: -12px;
   left: 12px;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent; }
-
-.triangle-arrow__left {
-  top: 12px;
-  left: -12px;
-  border-top-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent; }
-
-.triangle-arrow__right {
-  top: 12px;
-  right: -12px;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent; }
+  border-style: solid;
+  border-width: 6px;
+  border-color: #CC3333 transparent transparent transparent; }
 
 .msg--txtWrap {
   display: table-cell;
   vertical-align: middle;
   position: relative;
-  padding: 8px 14px; }
+  padding: 4px 14px; }
   .msg--txtWrap.message-is-right {
     -ms-transform: translate(-100%, 0%);
     transform: translate(-100%, 0%); }
@@ -1050,7 +1023,8 @@ ul, ol {
 
 .msg--txt {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px; }
+  font-size: 12px;
+  display: block; }
 
 .button--secondary {
   text-decoration: none;
@@ -1107,21 +1081,19 @@ ul, ol {
     color: #FFFFFF;
     line-height: 18px; }
   .msgToast .msg--txt__title {
-    font-size: 15px;
-    display: block; }
+    font-size: 15px; }
   .msgToast .msg--txt__sub {
     font-size: 12px;
     color: #BFBFBF;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    width: 100%;
-    display: block; }
+    width: 100%; }
   .msgToast .msg--txt__body {
-    font-size: 12px;
-    display: block; }
+    font-size: 12px; }
   .msgToast .msg--txt__btns {
     margin-top: 12px;
+<<<<<<< HEAD
     margin-bottom: 8px;
     display: block; }
 
@@ -1144,6 +1116,9 @@ ul, ol {
 .msg--txt__list {
   min-width: 18em;
   margin-bottom: 0.5em; }
+=======
+    margin-bottom: 8px; }
+>>>>>>> parent of 1475906... tooltip hover effect
 
 .js-addinvestment-trigger {
   position: absolute;

@@ -136,28 +136,19 @@ $( document ).on('click', '.js-tabmsg-right-trigger', function(e) {
 // -fade in and move up tab msg
 
 
-// $('.js-show-msg-trigger').on('mouseenter', function(e) {
-//   TweenMax.to( $('.js-hide-msg-target'), 0.6, {
-//     x: '0%',
-//     ease: Power2.easeOut
-//   }  );
-// });
-//
-// $('.js-hide-msg-trigger').on('mouseleave', function(e) {
-//   TweenMax.to( $('.js-hide-msg-target'), 0.6, {
-//     x: '-100%',
-//     ease: Power2.easeIn
-//   }  );
-// });
-
 $('.js-show-msg-trigger').on('mouseenter', function(e) {
-    $('.js-hide-msg-target').removeClass('hide');
+  TweenMax.to( $('.js-hide-msg-target'), 0.6, {
+    x: '0%',
+    ease: Power2.easeOut
+  }  );
 });
 
 $('.js-hide-msg-trigger').on('mouseleave', function(e) {
-    $('.js-hide-msg-target').addClass('hide');
+  TweenMax.to( $('.js-hide-msg-target'), 0.6, {
+    x: '-100%',
+    ease: Power2.easeIn
+  }  );
 });
-
 
 // TweenMax.to( $(this), 0.3, {
 //   y:'0%',
