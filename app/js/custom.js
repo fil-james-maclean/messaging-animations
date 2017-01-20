@@ -224,3 +224,34 @@ console.log('inview');
    e.preventDefault();
  } );
 // $( ".tab__active" ).clone().appendTo( ".tabGroup" );
+
+
+
+
+
+toastr.error(
+	'The email already exists in the notification list.',
+	'Error',
+	{
+		'positionClass': 'toast-component-top-full-width',
+		'target': '.js-addinvestment-trigger',
+		'preventDuplicates': 'true'
+	}
+);
+
+var toast = toastr.warning(
+	'<span class="left clr-l">You have unsaved changes</span><div class="toastr-btn-wrapper right clearfix"><button class="button right error">Cancel</button><button class="button right success margin-r20">Continue Editing</button></div>',
+	'Warning',
+	{
+		'positionClass': 'toast-component-top-full-width',
+		'target': '.overlay-wrapper' ,
+		'extendedTimeOut': '0',
+		'timeOut': '0',
+		'messageClass': 'toast-message clearfix display-block',
+		'titleClass': 'toast-title width-auto display-block left',
+		'preventDuplicates': true
+} );
+
+toast.delegate( '.button.error', 'click', function() {
+	// view.removeOverlay();
+} );

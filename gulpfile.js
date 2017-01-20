@@ -31,7 +31,8 @@ gulp.task('vendor-js', function(){
     'bower_components/jquery/dist/jquery.min.js',
     'bower_components/protonet/jquery.inview/jquery.inview.min.js',
     'bower_components/gsap/src/minified/TweenMax.min.js',
-    'bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js'
+    'bower_components/gsap/src/minified/plugins/ScrollToPlugin.min.js',
+    'node_modules/toastr/toastr.js'
   ])
   .pipe( concat( 'vendor.js' ) )
   .pipe( gulp.dest( 'app/js' ) );
