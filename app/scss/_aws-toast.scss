@@ -1,0 +1,193 @@
+$toast-position: 20px;
+$toast-spacing: 10px;
+
+$toast-width: 325px;
+$toast-min-height: 65px;
+$toast-background: rgba($grey85, .95);
+$toast-box-shadow: 0 0 12px rgba($grey85, .2);
+$toast-font-size: $app-font-size;
+
+$toast-icon-width: $toast-min-height;
+$toast-icon-font-size: 30px;
+$toast-icon-background-warning: $yellow1;
+$toast-icon-background-error: $red1;
+$toast-icon-background-success: $green1;
+$toast-icon-background-info: $grey60;
+
+#toast-container {
+  position: fixed;
+  z-index: 999999;
+}
+
+.toast {
+  @extend %icon;
+  background: $toast-background;
+  width: $toast-width;
+  min-height: $toast-min-height;
+  margin-top: $toast-spacing;
+  padding: 15px 15px 15px 80px;
+  color: $white;
+  font-size: $toast-font-size;
+  position: relative;
+  overflow: hidden;
+  box-shadow: $toast-box-shadow;
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+  }
+  &:before {
+    top: 17px;
+    left: 17px;
+    z-index: 2;
+    font-size: $toast-icon-font-size;
+    color: $white;
+    text-align: center;
+  }
+  &:after {
+    width: $toast-icon-width;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &.toast-warning {
+    &:after {
+      background: $toast-icon-background-warning;
+    }
+    &:before {
+      content: $icon-warning-triangle-filled;
+      color: $grey85;
+    }
+  }
+  &.toast-error {
+    &:after {
+      background: $toast-icon-background-error;
+    }
+    &:before {
+      content: $icon-warning-circle-filled;
+    }
+  }
+  &.toast-success {
+    &:after {
+      background: $toast-icon-background-success;
+    }
+    &:before {
+      content: $icon-circle-tick;
+    }
+  }
+  &.toast-info {
+    &:after {
+      background: $toast-icon-background-info;
+    }
+    &:before {
+      content: $icon-info-circle;
+    }
+  }
+}
+
+.toast-title,
+.toast-message {
+  font-family: arial;
+  line-height: 1.5;
+}
+
+.toast-title {
+  font-weight: bold;
+}
+
+.toast-message {
+  word-wrap: break-word;
+  a {
+    color: $white;
+  }
+}
+
+
+.toast-top-left {
+  top: $toast-position;
+  left: $toast-position;
+}
+
+.toast-top-right {
+  top: $toast-position;
+  right: $toast-position;
+}
+
+.toast-bottom-right {
+  right: $toast-position;
+  bottom: $toast-position;
+}
+
+.toast-bottom-left {
+  bottom: $toast-position;
+  left: $toast-position;
+}
+
+.toast-top-center,
+.toast-bottom-center,
+.toast-top-full-width,
+.toast-bottom-full-width {
+  .toast {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.toast-top-center,
+.toast-bottom-center {
+  right: 0;
+  width: 100%;
+}
+
+.toast-top-center {
+  top: 0;
+}
+
+.toast-bottom-center {
+  bottom: 0;
+}
+
+.toast-top-full-width,
+.toast-bottom-full-width {
+  width: 100%;
+  right: 0;
+  > .toast {
+    width: 96%;
+  }
+}
+
+.toast-top-full-width {
+  top: 0;
+}
+
+.toast-bottom-full-width {
+  bottom: 0;
+}
+
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.3em;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: $white;
+  opacity: 0.8;
+  &:hover,
+  &:focus {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.4;
+  }
+}
+
+.toast-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  background-color: $black;
+  opacity: 0.4;
+}

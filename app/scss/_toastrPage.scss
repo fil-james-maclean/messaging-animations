@@ -1,0 +1,169 @@
+// toastr page scss specific
+@import 'toastr-custom';
+
+
+#toast-container{
+	position: absolute;
+
+
+	.button.success,
+	button.success {
+		background-color: #ff8d31;
+
+		&:focus,
+		&:hover {
+			background-color: lighten(#ff8d31, 10%);
+		}
+	}
+
+	.button.error,
+	button.error,
+	button.error.toast-close-button,
+	.button.error.toast-close-button {
+		background-color: #606b7e;
+		border-color: #606b7e;
+
+		&:focus,
+		&:hover {
+			background-color: lighten(#606b7e, 10%);
+		}
+	}
+
+}
+
+#toast-container > div {
+    border-radius: 0px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+    box-shadow: none;
+    color: #fff;
+    opacity: 1;
+
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+  	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+ 	box-shadow: 0 1px 3px rgba(0,0,0,0.7);
+
+}
+
+#toast-container > div:hover {
+	-moz-box-shadow: 0 2px 7px rgba(0,0,0,1);
+  	-webkit-box-shadow: 0 2px 7px rgba(0,0,0,1);
+  	box-shadow: 0 2px 7px rgba(0,0,0,1);
+}
+
+
+
+.toast-top-full-width {
+	top: 110%;
+}
+
+.toast-component-top-full-width {
+	&#toast-container {
+		top: 0;
+		right: 0;
+		left: 0;
+
+		> div {
+			width: 100%;
+		}
+	}
+
+}
+
+.toast-component-top-offset {
+    &#toast-container {
+		top: -60px;
+		right: 0;
+		left: 0;
+		width: auto;
+
+		> div {
+			width: auto;
+		}
+	}
+}
+
+.toast-component-input-field {
+	position: absolute;
+	bottom: -150%;
+	width: 100%;
+	padding-right: 2em;
+
+	&#toast-container {
+		> div {
+			width: 100%;
+		}
+	}
+}
+
+// toastr notification color scheme overrides
+.toast-title  {
+	margin-bottom: 0.5em;
+}
+
+.toast-message {
+	line-height: 1.4em;
+	letter-spacing: 0.5px;
+}
+
+.toast {
+	// background-color: #030303;
+	background-color: #3e4552;
+}
+
+
+.toast-success {
+	border-left: 5px solid #51A351;
+	// background-color: #51A351;
+
+	.toast-title {
+		color: #51A351;
+	}
+}
+.toast-error {
+	border-left: 5px solid #BD362F;
+	// background-color: #BD362F;
+
+	.toast-title {
+		color: #BD362F;
+	}
+
+}
+.toast-info {
+	border-left: 5px solid #2F96B4;
+	// background-color: #2F96B4;
+
+	.toast-title {
+		color: #2F96B4;
+	}
+
+}
+.toast-warning {
+	border-left: 5px solid #F89406;
+	// background-color: #F89406;
+
+	.toast-title {
+		color: #F89406;
+	}
+
+}
+
+
+.button-wrapper {
+    position: relative;
+    width: 80%;
+    background: #e0e0e0;
+    padding: 2em;
+
+    margin: 100px auto;
+
+    > div {
+        position: relative;
+        width: 80%;
+        padding: 1em;
+        background: red;
+        cursor: pointer;
+
+    }
+
+}

@@ -136,19 +136,28 @@ $( document ).on('click', '.js-tabmsg-right-trigger', function(e) {
 // -fade in and move up tab msg
 
 
+// $('.js-show-msg-trigger').on('mouseenter', function(e) {
+//   TweenMax.to( $('.js-hide-msg-target'), 0.6, {
+//     x: '0%',
+//     ease: Power2.easeOut
+//   }  );
+// });
+//
+// $('.js-hide-msg-trigger').on('mouseleave', function(e) {
+//   TweenMax.to( $('.js-hide-msg-target'), 0.6, {
+//     x: '-100%',
+//     ease: Power2.easeIn
+//   }  );
+// });
+
 $('.js-show-msg-trigger').on('mouseenter', function(e) {
-  TweenMax.to( $('.js-hide-msg-target'), 0.6, {
-    x: '0%',
-    ease: Power2.easeOut
-  }  );
+    $('.js-hide-msg-target').removeClass('hide');
 });
 
 $('.js-hide-msg-trigger').on('mouseleave', function(e) {
-  TweenMax.to( $('.js-hide-msg-target'), 0.6, {
-    x: '-100%',
-    ease: Power2.easeIn
-  }  );
+    $('.js-hide-msg-target').addClass('hide');
 });
+
 
 // TweenMax.to( $(this), 0.3, {
 //   y:'0%',
@@ -220,29 +229,63 @@ console.log('inview');
 
 
 
+
+
+$('.js-toastr-here.original-alert').click( function(event){
+
+  toastr.success(
+  	'You have made outrageous profits. Remember, profit is theft', // message
+  	'Success', // title
+  	{
+  		'positionClass': 'toast-component-top-offset',
+  		'target': '.js-toastr-here.original-alert',
+  		'preventDuplicates': 'true'
+  	}
+  );
+
+});
+
+$('.js-toastr-here.other-alert').click( function(event){
+
+  toastr.success(
+  	'<div class="msg--icon  msg--icon__green icon-circle-tick"></div>', // message
+  	'Success', // title
+  	{
+  		'positionClass': 'toast-component-top-offset',
+  		'target': '.js-toastr-here.other-alert',
+  		'preventDuplicates': 'true'
+  	}
+  );
+
+});
+
+
+
 toastr.error(
 	'The email already exists in the notification list.',
 	'Error',
 	{
 		'positionClass': 'toast-component-top-full-width',
 		'target': '.js-addinvestment-trigger',
-		'preventDuplicates': 'true'
+		'preventDuplicates': 'true',
+    'messageClass': 'toast-message clearfix display-block',
+    'titleClass': 'toast-title width-auto display-block left'
 	}
 );
-
-var toast = toastr.warning(
-	'<span class="left clr-l">You have unsaved changes</span><div class="toastr-btn-wrapper right clearfix"><button class="button right error">Cancel</button><button class="button right success margin-r20">Continue Editing</button></div>',
-	'Warning',
-	{
-		'positionClass': 'toast-component-top-full-width',
-		'target': '.overlay-wrapper' ,
-		'extendedTimeOut': '0',
-		'timeOut': '0',
-		'messageClass': 'toast-message clearfix display-block',
-		'titleClass': 'toast-title width-auto display-block left',
-		'preventDuplicates': true
-} );
-
-toast.delegate( '.button.error', 'click', function() {
-	// view.removeOverlay();
-} );
+//
+// var toast = toastr.warning(
+// 	'<span class="left clr-l">You have unsaved changes</span><div class="toastr-btn-wrapper right clearfix"><button class="button right error">Cancel</button><button class="button right success margin-r20">Continue Editing</button></div>',
+// 	'Warning',
+// 	{
+// 		'positionClass': 'toast-component-top-full-width',
+// 		'target': '.overlay-wrapper' ,
+// 		'extendedTimeOut': '0',
+// 		'timeOut': '0',
+// 		'messageClass': 'toast-message clearfix display-block',
+// 		'titleClass': 'toast-title width-auto display-block left',
+// 		'preventDuplicates': true
+// } );
+//
+// toast.delegate( '.button.error', 'click', function() {
+// 	// view.removeOverlay();
+// } );

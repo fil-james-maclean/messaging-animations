@@ -5,6 +5,7 @@
 html {
     box-sizing: border-box;
     overflow-y: scroll !important;
+    font-family: sans-serif;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -13,6 +14,13 @@ html, body {
     margin: 0;
     padding: 0;
 }
+ul, ol {
+  margin: 0;
+  margin-left: 1em;
+  padding: 0;
+  list-style-type: square;
+}
+
 
 .bg-img-wrap {
     max-width: 1913px;
@@ -268,13 +276,35 @@ html, body {
 }
 .msg--floating {
     box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.2);
+
+    .msg--txtWrap {
+        // min-width: 280px;
+        max-width: 280px;
+        // padding: 12px 20px;
+        // background: rgba($grey85, 0.95);
+    }
+    .msg--txt__title {
+        // font-size: 15px;
+        display: block;
+    }
+
+    .msg--txt__body {
+        // font-size: 12px;
+        display: block;
+    }
+    .msg--txt__btns {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        display: block;
+    }
+
 }
 .msg--slideOut {
     overflow: hidden;
 }
 .hide {
     display: none;
-    visibility: hidden;
+    // visibility: hidden;
 }
 
 .msg--icon {
@@ -286,31 +316,59 @@ html, body {
     position: relative;
     z-index: 10;
 }
-.triangle-arrow__top {
+.triangle-arrow {
     position: absolute;
     height: 0;
     width: 0;
+    border-style: solid;
+    border-width: 6px;
+}
+.triangle-arrow__red {
+    border-color: $red1;
+}
+.triangle-arrow__yellow {
+    border-color: #fcf6cc; /*$yellow2 20%tint*/
+}
+.triangle-arrow__green {
+    border-color: $green1; /*$yellow2 20%tint*/
+}
+.triangle-arrow__top {
     top: -12px;
     left: 12px;
-    border-style: solid;
-    border-width: 6px;
-    border-color: transparent transparent $red1 transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    // border-bottom-color: transparent;
+    border-left-color: transparent;
 }
 .triangle-arrow__bottom {
-    position: absolute;
-    height: 0;
-    width: 0;
     bottom: -12px;
     left: 12px;
-    border-style: solid;
-    border-width: 6px;
-    border-color:  $red1 transparent transparent transparent;
+    // border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.triangle-arrow__left {
+    top: 12px;
+    left: -12px;
+    border-top-color: transparent;
+    // border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+.triangle-arrow__right {
+    top: 12px;
+    right: -12px;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    // border-left-color: transparent;
 }
 .msg--txtWrap {
     display: table-cell;
     vertical-align: middle;
     position: relative;
-    padding: 4px 14px;
+    padding: 8px 14px;
 
     &.message-is-right {
         transform: translate(-100%, 0%);
@@ -344,7 +402,6 @@ html, body {
     font-family: $web-safe-font;
     // color: $grey85;
     font-size: 12px;
-    display: block;
 }
 .button--secondary {
     text-decoration: none;
@@ -424,6 +481,7 @@ html, body {
     // }
     .msg--txt__title {
         font-size: 15px;
+        display: block;
     }
     .msg--txt__sub {
         font-size: 12px;
@@ -435,14 +493,15 @@ html, body {
     }
     .msg--txt__body {
         font-size: 12px;
+        display: block;
     }
     .msg--txt__btns {
         margin-top: 12px;
         margin-bottom: 8px;
-<<<<<<< HEAD
         display: block;
     }
 }
+
 .msgTooltip {
     position: absolute;
     top: 0;
@@ -457,9 +516,12 @@ html, body {
         transform: translate(-20%, 0%);
         opacity: 0;
         pointer-events: none;
-=======
->>>>>>> parent of 1475906... tooltip hover effect
     }
+}
+
+.msg--txt__list {
+    min-width: 18em;
+    margin-bottom: 0.5em;
 }
 .js-addinvestment-trigger {
     position: absolute;
@@ -478,138 +540,25 @@ html, body {
     }
 }
 
-
-
-
-#toast-container{
-	position: absolute;
-
-
-	.button.success,
-	button.success {
-		background-color: #ff8d31;
-
-		&:focus,
-		&:hover {
-			background-color: lighten(#ff8d31, 10%);
-		}
-	}
-
-	.button.error,
-	button.error,
-	button.error.toast-close-button,
-	.button.error.toast-close-button {
-		background-color: #606b7e;
-		border-color: #606b7e;
-
-		&:focus,
-		&:hover {
-			background-color: lighten(#606b7e, 10%);
-		}
-	}
+.prototype-form {
+  background: salmon;
+  list-style: none;
+}
+.prototype-form--brick {
+  float: left;
+  width: 320px;
+  padding: 12px;
+  background: lightgreen;
+}
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid;
+  font-size: 12px;
+}
+label, input {
+  display: block;
+  width: 100%;
 
 }
-
-#toast-container > div {
-    border-radius: 0px;
-    background-position: 15px center;
-    background-repeat: no-repeat;
-    box-shadow: none;
-    color: #fff;
-    opacity: 1;
-
-    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.7);
-  	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.7);
- 	box-shadow: 0 1px 3px rgba(0,0,0,0.7);
-
-}
-
-#toast-container > div:hover {
-	-moz-box-shadow: 0 2px 7px rgba(0,0,0,1);
-  	-webkit-box-shadow: 0 2px 7px rgba(0,0,0,1);
-  	box-shadow: 0 2px 7px rgba(0,0,0,1);
-}
-
-
-
-.toast-top-full-width {
-	top: 110%;
-}
-
-.toast-component-top-full-width {
-	&#toast-container {
-		top: 0;
-		right: 0;
-		left: 0;
-
-		> div {
-			width: 100%;
-		}
-	}
-
-}
-
-.toast-component-input-field {
-	position: absolute;
-	bottom: -150%;
-	width: 100%;
-	padding-right: 2em;
-
-	&#toast-container {
-		> div {
-			width: 100%;
-		}
-	}
-}
-
-// toastr notification color scheme overrides
-.toast-title  {
-	margin-bottom: 0.5em;
-}
-
-.toast-message {
-	line-height: 1.4em;
-	letter-spacing: 0.5px;
-}
-
-.toast {
-	// background-color: #030303;
-	background-color: #3e4552;
-}
-
-
-.toast-success {
-	border-left: 5px solid #51A351;
-	// background-color: #51A351;
-
-	.toast-title {
-		color: #51A351;
-	}
-}
-.toast-error {
-	border-left: 5px solid #BD362F;
-	// background-color: #BD362F;
-
-	.toast-title {
-		color: #BD362F;
-	}
-
-}
-.toast-info {
-	border-left: 5px solid #2F96B4;
-	// background-color: #2F96B4;
-
-	.toast-title {
-		color: #2F96B4;
-	}
-
-}
-.toast-warning {
-	border-left: 5px solid #F89406;
-	// background-color: #F89406;
-
-	.toast-title {
-		color: #F89406;
-	}
-
-}
+@import 'toastrPage';
